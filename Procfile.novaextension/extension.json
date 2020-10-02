@@ -1,0 +1,12 @@
+{
+  "identifier": "com.benspaulding.procfile",
+  "name": "Procfile",
+  "description": "Grammar & features for Procfiles",
+  "version": "0.1.0",
+  "license": "BSD-3-Clause",
+  "organization": "Ben Spaulding",
+  "repository": "https://github.com/benspaulding/nova-procfile",
+  "bugs": "https://github.com/benspaulding/nova-procfile/issues",
+  "categories": ["languages"],
+  "activationEvents": ["onLanguage:procfile", "onWorkspaceContains:Procfile"]
+}

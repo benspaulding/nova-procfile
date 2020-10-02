@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<syntax name="procfile">
+	<meta>
+		<name>Procfile</name>
+		<type>structured</type>
+		<preferred-file-extension>procfile</preferred-file-extension>
+	</meta>
+
+	<detectors>
+		<filename priority="1.0">Procfile</filename>
+		<extension priority="1.0">procfile</extension>
+	</detectors>
+
+	<comments>
+		<single>
+			<expression>#</expression>
+		</single>
+	</comments>
+
+	<scopes>
+		<include syntax="self" collection="process" />
+		<include syntax="self" collection="ignored" />
+	</scopes>
+
+	<collections>
+		<collection name="process">
+			<scope name="procfile.definition.identifier">
+				<symbol type="constant" scope="global" />
+				<starts-with>
+					<expression>^(?=[\w-]+:)</expression>
+				</starts-with>
+				<ends-with>
+					<expression>$</expression>
+				</ends-with>
+
+				<subscopes>
+					<scope name="procfile.identifier.constant.name">
+						<expression>(web|release)(?=:)</expression>
+					</scope>
+
+					<scope name="procfile.identifier.variable.name">
+						<expression>[\w-]+(?=:)</expression>
+					</scope>
+
+					<scope name="procfile.operator.colon">
+						<expression>:</expression>
+					</scope>
+
+					<scope name="procfile.value">
+						<starts-with>
+							<expression>: *</expression>
+						</starts-with>
+						<ends-with>
+							<expression>$</expression>
+						</ends-with>
+						<subsyntax name="shell" />
+					</scope>
+				</subscopes>
+			</scope>
+		</collection>
+
+		<collection name="ignored">
+			<scope name="procfile.comment.single" spell-check="true">
+				<expression>^(?![\w-]+:).*$</expression>
+			</scope>
+		</collection>
+	</collections>
+</syntax>
