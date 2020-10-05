@@ -1,0 +1,22 @@
+{
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"display": "Nova Procfile",
+	"extends": "@tsconfig/node12/tsconfig.json",
+	"compilerOptions": {
+		"outDir": "dist/Procfile.novaextension",
+		"rootDir": "src",
+		"strict": true,
+		"noFallthroughCasesInSwitch": true,
+		"noImplicitReturns": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"declaration": true,
+		"declarationMap": true,
+		"sourceMap": true
+	},
+	"typeAcquisition": {
+		"enable": true
+	},
+	"include": ["src/**/*", "static/scripts"],
+	"exclude": ["node_modules", ".nova"]
+}
