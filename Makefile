@@ -47,7 +47,7 @@ dev : all
 $(VENV_DIR)/pyvenv.cfg :
 	python -m venv $(VENV_DIR)
 	$(VENV_BIN)/python -m pip install -U --upgrade-strategy=eager pip setuptools wheel
-	$(VENV_BIN)/python -m pip --use-feature=2020-resolver install pre-commit==2.7.1
+	$(VENV_BIN)/python -m pip install pre-commit==4.0.1
 	$(VENV_BIN)/pre-commit install --install-hooks
 
 .PHONY : cleanall
