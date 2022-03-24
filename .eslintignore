@@ -1,5 +1,7 @@
 !.*rc.js
+.git
 .nova
+.venv
 dist
 node_modules
 package-lock.json

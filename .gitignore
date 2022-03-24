@@ -1,4 +1,5 @@
 .DS_Store
 .nova
+.venv
 dist
 node_modules
