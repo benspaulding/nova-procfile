@@ -11,7 +11,7 @@ module.exports = {
 	},
 	env: {
 		es2020: true,
-		mocha: true,
+		jest: true,
 		node: true,
 	},
 	plugins: ["@typescript-eslint", "prettier"],
