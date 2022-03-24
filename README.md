@@ -83,23 +83,21 @@ There is no published standard for `Procfile` syntax, but Foreman can be used as
 reference implementation. Though the various runners recognize different things as
 comments, process, or errors, Foreman’s syntax is recognized by this extension.
 
-| _`Procfile`_ | Foreman |   Honcho    | Goreman | Noreman | Shoreman | forego |
-| ------------ | :-----: | :---------: | :-----: | :-----: | :------: | :----: |
-| `n0:·…`      |    ✓    |      ✓      |    ✓    |    ✓    |    ✓     |   ✓    |
-| `n1:…`       |    ✓    |      ✓      |    ✓    |    ✓    |    ✗     |   ✓    |
-| `n-4:·…`     |    ✓    | # [\*](#f1) |    ✓    |    ✓    |    ✓     |   ✓    |
-| `# n3:·…`    |    #    |      #      |    #    |    #    |    #     |   ✗    |
-| `#n4:·…`     |    #    |      #      |    #    |    #    |    #     |   ✗    |
-| `n5·:…`      |    #    |      #      |    ✓    |    ✗    |    ✓     |   ✗    |
-| `·n6:·…`     |    #    |      #      |    ✓    |    ✗    |    ✓     |   ✗    |
-| `n·7:·…`     |    #    |      #      |    ✓    |    ✗    |  ✓ / ✗   |   ✗    |
-| `n8·:·…`     |    #    |      #      |    ✓    |    ✗    |    ✓     |   ✗    |
-| `n9·…`       |    #    |      #      |    #    |    ✗    |    ✗     |   ✗    |
+| _`Procfile`_ | Foreman | Honcho | Goreman | Noreman | Shoreman | forego |
+| ------------ | :-----: | :----: | :-----: | :-----: | :------: | :----: |
+| `n0:·…`      |    ✓    |   ✓    |    ✓    |    ✓    |    ✓     |   ✓    |
+| `n1:…`       |    ✓    |   ✓    |    ✓    |    ✓    |    ✗     |   ✓    |
+| `n-4:·…`     |    ✓    |   ✓    |    ✓    |    ✓    |    ✓     |   ✓    |
+| `# n3:·…`    |    #    |   #    |    #    |    #    |    #     |   ✗    |
+| `#n4:·…`     |    #    |   #    |    #    |    #    |    #     |   ✗    |
+| `n5·:…`      |    #    |   #    |    ✓    |    ✗    |    ✓     |   ✗    |
+| `·n6:·…`     |    #    |   #    |    ✓    |    ✗    |    ✓     |   ✗    |
+| `n·7:·…`     |    #    |   #    |    ✓    |    ✗    |  ✓ / ✗   |   ✗    |
+| `n8·:·…`     |    #    |   #    |    ✓    |    ✗    |    ✓     |   ✗    |
+| `n9·…`       |    #    |   #    |    #    |    ✗    |    ✗     |   ✗    |
 
 | _legend_          |     |
 | ----------------- | :-: |
 | valid process     |  ✓  |
 | ignored / comment |  #  |
 | error / hang      |  ✗  |
-
-<a name="f1">\*</a> _Support for dashes is coming to Honcho (<a href="https://github.com/nickstenning/honcho/pull/218">PR #218</a>)._
