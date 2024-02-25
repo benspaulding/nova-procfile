@@ -13,7 +13,16 @@
 	"config": [
 		{
 			"title": "Procfile: insert space",
-			"key": "procfile.insertSpace",
+			"key": "com.benspaulding.procfile.insertSpace",
+			"type": "boolean",
+			"default": true,
+			"description": "Separate the process type and its command with a space when formatting."
+		}
+	],
+	"configWorkspace": [
+		{
+			"title": "Procfile: insert space",
+			"key": "com.benspaulding.procfile.insertSpace",
 			"type": "boolean",
 			"default": true,
 			"description": "Separate the process type and its command with a space when formatting."

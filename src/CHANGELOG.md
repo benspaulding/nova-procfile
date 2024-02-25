@@ -4,6 +4,7 @@
 
 - Update dependencies.
 - Fix error in syntax definition: Encountered a zero-length single match for scope …
+- Add workspace-level extension settings.
 
 ## 0.2.0 (unreleased)
 
