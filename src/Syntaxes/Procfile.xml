@@ -61,7 +61,7 @@
 
 		<collection name="ignored">
 			<scope name="procfile.comment.single" spell-check="true">
-				<expression>^(?![\w-]+:).*$</expression>
+				<expression>^(?![\w-]+:).+$</expression>
 			</scope>
 		</collection>
 	</collections>
