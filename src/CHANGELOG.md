@@ -1,6 +1,11 @@
 # Changelog
 
-## 0.2.0
+## 0.3.0
+
+- Update dependencies.
+- Fix error in syntax definition: Encountered a zero-length single match for scope …
+
+## 0.2.0 (unreleased)
 
 Update dependencies.
 

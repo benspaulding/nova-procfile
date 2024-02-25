@@ -1,50 +1,50 @@
 {
-	"name": "nova-procfile",
-	"version": "0.1.0",
-	"description": "Grammar & features for Procfiles",
-	"license": "BSD-3-Clause",
-	"homepage": "https://github.com/benspaulding/nova-procfile",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/benspaulding/nova-procfile.git"
-	},
-	"bugs": {
-		"url": "https://github.com/benspaulding/nova-procfile/issues"
-	},
-	"author": {
-		"name": "Ben Spaulding",
-		"email": "ben@spaulding.im",
-		"url": "https://www.benspaulding.com"
-	},
-	"keywords": [
-		"nova",
-		"heroku",
-		"procfile"
-	],
-	"engines": {
-		"node": ">=16.0.0"
-	},
-	"main": "./dist/Procfile.novaextension/extension.js",
-	"scripts": {
-		"nova:prepublish": "npm run compile",
-		"compile": "tsc -p ./",
-		"lint": "eslint . --ext={j,t}s --fix && npm run format",
-		"format": "prettier '**/*.{j,t}s' '**/*.json' '**/*.md' '**/*.y*ml' --write",
-		"watch": "tsc -p ./ -w",
-		"pretest": "npm run compile && npm run lint",
-		"test": "node ./out/test/runTest.js"
-	},
-	"devDependencies": {
-		"@tsconfig/node17": "*",
-		"@types/node": "^17.0.0",
-		"@typescript-eslint/eslint-plugin": "*",
-		"@typescript-eslint/parser": "*",
-		"eslint": "*",
-		"eslint-config-prettier": "*",
-		"eslint-plugin-prettier": "*",
-		"glob": "*",
-		"prettier": "*",
-		"typescript": "*",
-		"jest": "*"
-	}
+  "name": "nova-procfile",
+  "version": "0.3.0",
+  "description": "Grammar & features for Procfiles",
+  "license": "BSD-3-Clause",
+  "homepage": "https://github.com/benspaulding/nova-procfile",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/benspaulding/nova-procfile.git"
+  },
+  "bugs": {
+    "url": "https://github.com/benspaulding/nova-procfile/issues"
+  },
+  "author": {
+    "name": "Ben Spaulding",
+    "email": "ben@spaulding.im",
+    "url": "https://www.benspaulding.com"
+  },
+  "keywords": [
+    "nova",
+    "heroku",
+    "procfile"
+  ],
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "main": "./dist/Procfile.novaextension/extension.js",
+  "scripts": {
+    "nova:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "lint": "eslint . --ext={j,t}s --fix && npm run format",
+    "format": "prettier '**/*.{j,t}s' '**/*.json' '**/*.md' '**/*.y*ml' --write",
+    "watch": "tsc -p ./ -w",
+    "pretest": "npm run compile && npm run lint",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@tsconfig/node20": "*",
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "*",
+    "@typescript-eslint/parser": "*",
+    "eslint": "*",
+    "eslint-config-prettier": "*",
+    "eslint-plugin-prettier": "*",
+    "glob": "*",
+    "prettier": "*",
+    "typescript": "*",
+    "jest": "*"
+  }
 }

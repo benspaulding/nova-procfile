@@ -2,9 +2,38 @@
 
 A [Nova][nova] [extension][novaext] with support for [`Procfile`s][heroku].
 
-The `Procfile` is mostly known for its use by [Heroku][] and [Foreman][]. However, it
-is supported by a number of other services and utilities, and is extremely handy for
-development. With this `.env` file:
+The `Procfile` is mostly known for its use by [Heroku][] and [Foreman][]. However, it is
+supported by a number of other services and utilities, and is extremely handy for
+development.
+
+## Features
+
+### Syntax Highlighting
+
+Within Procfiles the names of valid process definitions are highlighted. The processe
+values are also highlighted as shell commands.
+
+### Symbol Navigation
+
+You have probably never seen a long `Procfile`, but just in case you do, this extension
+has you covered! You can navigate through the processes with the symbol navigator or the
+command palette.
+
+## Release Notes
+
+See the [changelog](./CHANGELOG.md).
+
+## Todo
+
+There are still a few things I plan to do.
+
+- Add diagnostics to warn if a process name is not unique.
+- Add formatting capabilities.
+- Add automatic tasks for running Procfiles.
+
+## `Procfile` example
+
+As an example of how handy a Procfile can be, with this `.env` file:
 
 ```dotenv
 DJANGO_SETTINGS_MODULE=my_site.settings.local
@@ -25,34 +54,7 @@ assets: npm run watch
 djsync: browser-sync start --proxy="$WEB_HOST" --port="$BROWSERSYNC_PORT"
 ```
 
-You can run `honcho start` and have it all up and running!
-
-## Features
-
-### Syntax Highlighting
-
-Procfiles are highlighted not only to show what a valid process definition is, but it
-also highlights the command to run using the shell highlighter.
-
-### Symbol Navigation
-
-You have probably never seen a long `Procfile`, but just in case you do, this
-extension has you covered! You can navigate through the processes with the symbol
-navigator or the command palette.
-
-## Release Notes
-
-See [CHANGELOG](./CHANGELOG.md).
-
-## Todo
-
-There are still a few things I plan to do.
-
-### Features
-
-- Add diagnostics to warn if a process name is not unique.
-- Add formatting capabilities.
-- Add automatic tasks for running Procfiles.
+… you can run `honcho start` and have it all up and running!
 
 ## `Procfile` runners: Foreman & Clones
 
@@ -64,8 +66,8 @@ The most used and robust are:
 
 Others include:
 
-- [node-foreman][noreman] (Node) _— n.b. How on earth is this not named “Noreman”?
-  I insist on referring to it as such!_
+- [node-foreman][noreman] (Node) _— n.b. How on earth is this not named “Noreman”? I
+  insist on referring to it as such!_
 - [Shoreman][] (Shell)
 - [forego][] (Go)
 
