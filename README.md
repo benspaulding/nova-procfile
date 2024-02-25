@@ -10,7 +10,7 @@ development.
 
 ### Syntax Highlighting
 
-Within Procfiles the names of valid process definitions are highlighted. The processe
+Within Procfiles the names of valid process definitions are highlighted. The process
 values are also highlighted as shell commands.
 
 ### Symbol Navigation
