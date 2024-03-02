@@ -1,0 +1,14 @@
+test0 echo sans colon-- && sleep 999 && echo --done
+test1: echo colon space-- && sleep 999 && echo --done
+ test2: echo leading space-- && sleep 999 && echo --done
+test3 : echo space colon space-- && sleep 999 && echo --done
+test4: echo colon no space-- && sleep 999 && echo --done
+test 5: echo space in name-- && sleep 999 --done
+# test6: echo hash space-- && sleep 999 --done
+#test7: echo hash-- && sleep 999 --done
+test-8: echo dash in name-- && sleep 999 && echo --done
+test9 :echo space colon-- && sleep 999 && echo --done
+cmd: that
+release: those
+web: them
+web: this

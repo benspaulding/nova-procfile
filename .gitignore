@@ -1,5 +1,6 @@
+!.nova
 *.novaextension
 .DS_Store
-.nova
+.nova/Configuration.json
 .venv
 node_modules

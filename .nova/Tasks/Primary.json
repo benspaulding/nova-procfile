@@ -1,0 +1,23 @@
+{
+  "actions" : {
+    "build" : {
+      "enabled" : true,
+      "preActions" : [
+        {
+          "script" : "just setup",
+          "type" : "runScript"
+        }
+      ],
+      "script" : "just build"
+    },
+    "clean" : {
+      "enabled" : true,
+      "script" : "just clean"
+    },
+    "run" : {
+      "enabled" : true,
+      "script" : "just watch"
+    }
+  },
+  "openLogOnRun" : "start"
+}
