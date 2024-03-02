@@ -24,15 +24,14 @@
   "engines": {
     "node": ">=20.0.0"
   },
-  "main": "./dist/Procfile.novaextension/extension.js",
+  "main": "Procfile.novaextension/Scripts/main.js",
   "scripts": {
     "nova:prepublish": "npm run compile",
     "compile": "tsc -p ./",
-    "lint": "eslint . --ext={j,t}s --fix && npm run format",
+    "lint": "eslint . --ext={j,t}s --fix",
     "format": "prettier '**/*.{j,t}s' '**/*.json' '**/*.md' '**/*.y*ml' --write",
-    "watch": "tsc -p ./ -w",
-    "pretest": "npm run compile && npm run lint",
-    "test": "node ./out/test/runTest.js"
+    "watch": "npm run compile -- -w",
+    "pretest": "npm run compile && npm run lint && npm run format"
   },
   "devDependencies": {
     "@tsconfig/node20": "*",

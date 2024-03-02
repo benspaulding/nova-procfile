@@ -1,15 +1,14 @@
 NODE_MODULES := node_modules
 VENV_DIR := .venv
 VENV_BIN := $(VENV_DIR)/bin
-DIST_DIR := dist
 
 PKG_DIR := .
-PKG_FILES := LICENSE README.md
+PKG_FILES := README.md CHANGELOG.md LICENSE.txt
 
 SRC_DIR := src
 SRC_FILES := $(subst $(SRC_DIR)/,,$(filter-out %.ts,$(wildcard $(addprefix $(SRC_DIR)/,* */* */*/*))))
 
-EXT_DIR := $(DIST_DIR)/Procfile.novaextension
+EXT_DIR := Procfile.novaextension
 EXT_PKG_FILES := $(addprefix $(EXT_DIR)/,$(PKG_FILES))
 EXT_SRC_FILES := $(addprefix $(EXT_DIR)/,$(SRC_FILES))
 EXT_FILES := $(EXT_PKG_FILES) $(EXT_SRC_FILES)
@@ -24,11 +23,8 @@ $(EXT_PKG_FILES) : $(EXT_DIR)/% : $(PKG_DIR)/% | $(EXT_DIR)
 $(EXT_SRC_FILES) : $(EXT_DIR)/% : $(SRC_DIR)/% | $(EXT_DIR)
 	cp -r $< $@
 
-$(EXT_DIR): | $(DIST_DIR)
+$(EXT_DIR) :
 	mkdir $(EXT_DIR)
-
-$(DIST_DIR) :
-	mkdir $(DIST_DIR)
 
 .PHONY : tsc
 tsc : $(NODE_MODULES) | $(EXT_DIR)
@@ -55,7 +51,7 @@ cleanall : cleandist cleanmeta
 
 .PHONY : cleandist
 cleandist :
-	rm -rf $(DIST_DIR)
+	rm -rf $(EXT_DIR)
 
 .PHONY : cleanmeta
 cleanmeta :
