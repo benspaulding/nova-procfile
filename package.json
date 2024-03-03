@@ -3,6 +3,7 @@
   "version": "0.3.0",
   "description": "Grammar & features for Procfiles",
   "license": "BSD-3-Clause",
+  "private": true,
   "homepage": "https://github.com/benspaulding/nova-procfile",
   "repository": {
     "type": "git",
@@ -28,22 +29,25 @@
   "scripts": {
     "nova:prepublish": "npm run compile",
     "compile": "tsc -p ./",
-    "lint": "eslint . --ext={j,t}s --fix",
+    "lint": "eslint src --ext={j,t}s --fix",
     "format": "prettier '**/*.{j,t}s' '**/*.json' '**/*.md' '**/*.y*ml' --write",
     "watch": "npm run compile -- -w",
     "pretest": "npm run compile && npm run lint && npm run format"
   },
   "devDependencies": {
     "@tsconfig/node20": "*",
-    "@types/node": "^20.0.0",
+    "@types/eslint": "*",
+    "@types/glob": "*",
+    "@types/jest": "*",
+    "@types/nova-editor": "*",
     "@typescript-eslint/eslint-plugin": "*",
     "@typescript-eslint/parser": "*",
     "eslint": "*",
     "eslint-config-prettier": "*",
-    "eslint-plugin-prettier": "*",
+    "eslint-plugin-nova": "*",
     "glob": "*",
+    "jest": "*",
     "prettier": "*",
-    "typescript": "*",
-    "jest": "*"
+    "typescript": "*"
   }
 }

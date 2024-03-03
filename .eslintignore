@@ -1,7 +1,7 @@
 !.*rc.js
 *.novaextension
+*lock.json
 .git
 .nova
 .venv
 node_modules
-package-lock.json

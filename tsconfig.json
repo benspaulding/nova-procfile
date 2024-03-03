@@ -3,6 +3,7 @@
 	"display": "Nova Procfile",
 	"extends": "@tsconfig/node20/tsconfig.json",
 	"compilerOptions": {
+		"types": ["nova-editor"],
 		"rootDir": "src",
 		"outDir": "Procfile.novaextension",
 		"noFallthroughCasesInSwitch": true,

@@ -22,7 +22,7 @@ repos:
         name: eslint
         description: Hook for a version of eslint that the mirror repo skipped.
         language: script
-        entry: node_modules/.bin/eslint --fix
+        entry: node_modules/.bin/eslint --fix src
         args: []
         types: [file]
         files: \.[jt]s$

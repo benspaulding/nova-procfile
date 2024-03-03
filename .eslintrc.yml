@@ -10,19 +10,20 @@ parserOptions:
     - ES2022
   sourceType: module
 
+plugins:
+  - "@typescript-eslint"
+  - nova
+
 env:
   es2022: true
   jest: true
   node: true
-
-plugins:
-  - "@typescript-eslint"
-  - prettier
+  nova/nova: true
 
 extends:
   - eslint:recommended
   - plugin:@typescript-eslint/recommended
-  - plugin:prettier/recommended
+  - prettier # provided by eslint-config-prettier
 
 rules:
   "@typescript-eslint/naming-convention": warn
